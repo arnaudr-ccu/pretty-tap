@@ -19,5 +19,5 @@ Pretty print a TAP text.
 
 References:
 
-- <http://testanything.org/>
+- <https://testanything.org/>
 - <https://github.com/python-tap/tappy>
