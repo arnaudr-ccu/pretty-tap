@@ -68,6 +68,11 @@ def main(argv=sys.argv, stream=sys.stderr):
 
     #print(buf)
 
+    firstline = buf.partition('\n')[0]
+    if re.match('^[0-9]+\.\.[0-9]+$', firstline) is None:
+        print("Input does not seem to be TAP format", file=sys.stderr)
+        sys.exit(1)
+
     buf = pretty_tap(buf)
     print(buf)
 
